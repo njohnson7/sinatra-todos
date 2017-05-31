@@ -40,12 +40,6 @@ helpers do
   def sort(arr, &block)
     arr.map.with_index { |elem, idx| [elem, idx] }.sort_by(&block)
   end
-
-  # def sort_lists(lists, &block)
-  #   lists.map.with_index { |list, idx| [list, idx] }
-  #        .partition { |list, idx| !list_complete?(list) }
-  #        .flatten(1).each(&block)
-  # end
 end
 
 before do
