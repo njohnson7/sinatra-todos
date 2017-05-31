@@ -98,7 +98,7 @@ end
 
 get '/lists/:list_id' do
   @list_id = params[:list_id].to_i
-  # redirect '/lists' unless (0...session[:lists].size).cover?(@list_id)
+  redirect '/lists' unless (0...session[:lists].size).cover?(@list_id)
   @list = session[:lists][@list_id]
 
   erb :list, layout: :layout
