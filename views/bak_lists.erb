@@ -1,0 +1,9 @@
+<ul id='lists'>
+  <% sort_lists(@lists).each do |list| %>
+    <%= list %>
+  <% end %>
+</ul>
+
+<% content_for :header_links do %>
+  <a class='add' href='/lists/new'>New List</a>
+<% end %>
